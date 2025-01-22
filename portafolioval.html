@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="css/portafolioval.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Portafolio by Val</h1>
+        <nav>
+            <ul>
+                <li><a href="portafolioval.html">Sobre mí</a></li>
+                <li><a href="actividades.html">Mis actividades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Sobre mí</h2>
+        <p>Hola, soy Valeria, estudiante de la carrera de Administración de Negocios Internacionales y una apasionada exploradora de nuevos horizontes. Soy originaria de la encantadora ciudad de Xalapa, conocida por su riqueza cultural, artística y natural.</p>
+
+        <p>Viajar y descubrir nuevos lugares son mis grandes pasiones; me encanta sumergirme en diferentes culturas, conocer personas de todo el mundo y aprender de cada experiencia. Creo que cada viaje es una oportunidad para ampliar mi perspectiva y enriquecer tanto mi vida personal como profesional.</p>
+
+        <p>Como futura profesional en negocios internacionales, mi meta es conectar ideas, personas y mercados en un mundo cada vez más globalizado. Siempre busco nuevas formas de crecer, aprender y contribuir al desarrollo de proyectos que marquen la diferencia.</p>
+
+        <img src="img/me.png.jpg" width="50%" height="50%" alt="">
+    </section>
+
+    <section id="carousel">
+        <h2>Lo que me gusta</h2>
+        <div class="carousel">
+            <div class="slide"><img src="img/Kitten.png" alt="Kitten.png"></div>
+            <div class="slide"><img src="img/airplane.png" alt="airplane.png"></div>
+            <div class="slide"><img src="img/beach.png" alt="beach.png"></div>
+        </div>
+    </section>
+
+
+    <section id="about">
+        <h2>Sobre la experiencia educativa</h2>
+        <p>Este portafolio forma parte de la experiencia educativa de Proyecto Web, durante el intersemestral de invierno. Su propósito es concentrar todas las actividades realizadas a lo largo de este periodo, permitiendo una visión general de los proyectos y habilidades adquiridas. La clase tiene como objetivo principal enseñar a crear páginas web desde cero, abarcando desde los fundamentos básicos hasta el desarrollo de proyectos funcionales. </p>
+
+        <p>Además, esta clase resulta de gran relevancia para mi formación profesional como futura licenciada en Administración de Negocios Internacionales, ya que me proporciona herramientas digitales que permiten mejorar la presencia online de las empresas y gestionar eficientemente sus recursos en un entorno globalizado. El dominio de estas habilidades es fundamental para adaptarnos a las demandas del mercado y contribuir a la innovación en los negocios internacionales.</p>
+
+        <img src="img/proyecto.png" width="50%" height="50%" alt="">
+    </section>
+
+
+    <section id="city">
+        <h2>Mi Ciudad</h2>
+        <p>Xalapa, la capital del estado de Veracruz, México, es una ciudad rodeada de belleza natural y un clima agradable que invita a ser explorada. Situada en la Sierra de las Minas, ofrece un paisaje montañoso y una vegetación exuberante, destacándose por su biodiversidad y espacios naturales como el Parque Ecológico de Xalapa y el Jardín Botánico, que la convierten en un destino ideal para los amantes de la naturaleza.</p>
+
+        <p>La ciudad es también un importante centro cultural y educativo, con instituciones destacadas como la Universidad Veracruzana. Xalapa tiene una fuerte tradición en las artes, siendo sede de numerosos festivales, exposiciones y actividades culturales durante todo el año. Su centro histórico es hogar de la Plaza Lerdo y el Museo de Antropología de Xalapa, que preserva una valiosa colección de arte prehispánico.</p>
+
+        <img src="img/xalapa.png" width="50%" height="50%" alt="">
+    </section>
+
+
+    <footer>
+        <p>&copy; 2025 Valeria Vázquez Hernández. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        setInterval(nextSlide, 3000);
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>
